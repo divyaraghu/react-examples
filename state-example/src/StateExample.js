@@ -9,9 +9,9 @@ class StateExample extends Component{
         };
     }
 
-    incrementCounter(curState){
+    incrementCounter(){
         this.setState({
-            counter: curState.counter+1
+            counter: this.state.counter+1
         })
     }
 
@@ -26,7 +26,7 @@ class StateExample extends Component{
                 <header> State in a Class Component - Example </header>
                 <div className="box counter-header">Counter value {this.state.counter} </div>
                 <div className="box"> 
-                    <button className="counter-buttons" onClick = { () => this.incrementCounter(this.state)} > Increment Counter </button> 
+                    <button className="counter-buttons" onClick = { () => this.incrementCounter()} > Increment Counter </button> 
                     <button  className="counter-buttons" onClick = { () => this.resetCounter()} > Reset Counter </button>
                 </div>
 
