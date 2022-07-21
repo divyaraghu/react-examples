@@ -1,0 +1,11 @@
+header{
+  text-align: center;
+}
+
+.component{
+    border: solid 1px grey;
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+
+}
