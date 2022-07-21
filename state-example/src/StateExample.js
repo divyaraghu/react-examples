@@ -9,7 +9,7 @@ class StateExample extends Component{
         };
     }
     //Set State exammple with callback
-    incrementCounter(){
+    incrementCounter = () => {
         //Setstate method is called asynchronizly by react. 
         this.setState(
             {counter: this.state.counter+1}, 
@@ -17,7 +17,7 @@ class StateExample extends Component{
         )
     }
     //Set State example without callback
-    resetCounter(){
+    resetCounter = () => {
         this.setState({
             counter: 0
         });
@@ -36,8 +36,8 @@ class StateExample extends Component{
                 <header> State in a Class Component - Example </header>
                 <div className="box counter-header">Counter value {this.state.counter} </div>
                 <div className="box"> 
-                    <button className="counter-buttons" onClick = { () => this.incrementCounter()} > Increment Counter </button> 
-                    <button  className="counter-buttons" onClick = { () => this.resetCounter()} > Reset Counter </button>
+                    <button className="counter-buttons" onClick = {this.incrementCounter} > Increment Counter </button> 
+                    <button  className="counter-buttons" onClick = {this.resetCounter} > Reset Counter </button>
                     <button  className="counter-buttons" onClick = { () => this.anotherIncrementExample(5)} > Increment By 5 </button>
                 </div>
 
