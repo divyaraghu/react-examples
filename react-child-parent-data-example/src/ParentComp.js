@@ -5,8 +5,6 @@ import ChildComp2 from './ChildComp2';
 export class ParentComp extends Component {
     constructor(){
         super();
-
-       
     }
 
     setParentMessage = (incomingMessage) => {

@@ -57,7 +57,7 @@ function EmployeeForm(){
                     <Form.Label>Country </Form.Label>
                     <Form.Control type="text" value={enteredCountry} onChange={CountryChangeHandler} placeholder="Enter Country" required/>
                 </Form.Group>
-                <Button type='submit'>Add Employee</Button>
+                <Button type='submit' className="col-md-12 mt-4">Add Employee</Button>
             </Form>
         </Container>
         </Alert>
