@@ -17,6 +17,9 @@
     list-style: none;
     
 }
+.footer-menu a{
+    text-decoration: none;
+}
 
 .footer ul li{
     padding:0.5rem 0;

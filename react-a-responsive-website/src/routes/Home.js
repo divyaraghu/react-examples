@@ -47,10 +47,10 @@ export default function Home() {
   return (
     <div className="home section-container">
        <div className="intro">
-            I am Divyapriya. I am lead java developer in RivetLogic Inc (Acquired by Capgemini) with experience in Java and various J2EE technologies. I have ample experience in front end technologies as well. I am currently leading a team of engineers in development of an Enterprise Web Content Management system.  I've lead multiple enterprise level applications for various clients. 
+            I am lead java developer with experience in Java and various J2EE technologies. I have ample experience in front end technologies as well. I've worked on Enterprise level Web Content Management systems such as Liferay, Crafter and Content Management Systems such as Alfresco. I've led multiple enterprise level applications for various clients across various domains. 
         </div>
         <div className="heading_section">
-          <h2 className="section_title">Projects I've led</h2>
+          <h2 className="section_title">Projects I've worked on</h2>
         </div>
       <Slider {...settings}
        nextArrow={<Arrow type="next" />}
@@ -60,41 +60,41 @@ export default function Home() {
        appendDots={appendDots}
       >
            <div>
-             <h3>Dropbox partner Portal </h3>
-             <div className="project-desc">Developed a partner portal for Dropbox by customizing the Web content management system called Liferay.
-             Added integrations to Salesforce for Partner Deal management. Added API integrations to Meridian for Training management within the partner portal. Also configured SSO for seamless user experirence from transfering from Dropbox Partner Portal to Meridian Training sites. 
-             Worked on this project for about a year from 2016 to 2017.</div>
+             <h3>Project 1 for a Content Management Client </h3>
+             <div className="project-desc">Developed a partner portal for Client by customizing the Web content management system called Liferay.
+             Added integrations to Salesforce for Partner Deal management. Added API integrations to Meridian for Training management within the partner portal. Also configured SSO for seamless user experirence from transfering from the Partner Portal to Meridian Training sites. 
+             </div>
           </div>
           <div>
-            <h3>Marriott International - LOBO </h3>
-            <div className="project-desc">LOBO/Global Design is an Application that is used for hosting various blueprints, new project details, existing project renovations of Marriott. Its a one stop portal used by business consultants, Marriott Owners and Users across the globe.
-            I worked on porting the Marriott LOBO Application from IBM SoftLayer to AWS EC2 Instances. Transfered the existing MySQL database to RDS using Database Migration System. I did AWS certification prior to working on this project.
-            Wrote Ansible scripts for installation of Alfresco application across QA and PROD nodes. Transfered Solr indexes from existing system to new Alfresco Solr instances.
-            Working on this project was a real challenge given the complexity and volume of the system. Worked on this project for about three years from 2018 to 2020.
+            <h3>Project 2 - for a Hospitality Client </h3>
+            <div className="project-desc">Client had an Application that is used for hosting various blueprints, new project details, existing project renovations of the client. Its a one stop portal used by business consultants, Client Owners and Users across the globe.
+            I worked on porting application from an external server to AWS EC2 Instances. Transfered the existing MySQL database to RDS using Database Migration System. I did AWS certification prior to working on this project.
+            Wrote Ansible scripts for installation of Content Management application across QA and PROD nodes. Transfered Solr indexes from existing system to new Solr instances.
+            Working on this project was a real challenge given the complexity and volume of the system.
             </div>
           </div>
           <div>
-            <h3>NewYork State - Financial Services</h3>
+            <h3>Project 3  - User Portal for a State Client</h3>
             <div className="project-desc">
-               Worked on NYS - Financial Services portal used by NYS business users. Customized the portal using Liferay and JSF. Working on this project was a real challenge due to usage of good old JSF code in existing code and minimum amount of support from Liferay for JSF portlets. Faced and resolved many issues while working on this project including performance issues. 
+               Worked on a State project used by State service workers. Customized the portal using Liferay and JSF. Working on this project was a real challenge due to usage of good old JSF code in existing code and minimum amount of support from Liferay for JSF portlets. Faced and resolved many issues while working on this project including performance issues. 
             </div>
           </div>
           <div>
-            <h3>Noridian </h3>
+            <h3>Project 4 - Claims Portal for an Insurance client  </h3>
             <div className="project-desc">
-              Noridian - Blue Cross Blue shield of North Dakota
+              Worked on a Claims system for an insurance client
             </div>
           </div>
           <div>
-            <h3>TRowe Price </h3>
+            <h3>Project 5 - Enterprise Content Management Application upgrade for an Investment Client</h3>
             <div className="project-desc">
-              TRowe Price - Alfresco upgrade
+              Worked on upgrading an Enterprise Content Management Application to latest version for an investment client
             </div>
           </div>
           <div>
-          <h3>NuFarm </h3>
+          <h3>Project 6 - Employee Intranet for an Australian client </h3>
           <div className="project-desc">
-            NuFarm - Employee Intranet
+            Worked on employee Intranet portal using web content management system for an Australian client.
           </div>
           </div>
       </Slider>
