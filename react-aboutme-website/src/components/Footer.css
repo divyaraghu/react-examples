@@ -2,6 +2,10 @@
     color: #193f0f;
 }
 
+.footer-menu li a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     background-image: url(https://cdn.shopify.com/s/files/1/1258/6665/files/ft_bg.png?v=1636552563);
     background-position: center top;
