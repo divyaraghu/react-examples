@@ -26,7 +26,7 @@ export class PostList extends Component {
         const { posts } = this.state;
         return (
             <div className="posts">
-                <h1> List of posts </h1>
+                <h1> HTTP Get Example - List of posts </h1>
 
                 <Table striped bordered hover>
                     <thead>

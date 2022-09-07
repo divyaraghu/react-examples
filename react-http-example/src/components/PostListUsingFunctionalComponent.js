@@ -10,36 +10,38 @@ function PostListUsingFunctionalComponent() {
 
     useEffect(() => {
         console.log("In component did mount");
-        axios.get('https://jsonplaceholder.typicode.com/comments')
+        axios.get('https://jsonplaceholder.typicode.com/comments1')
             .then(response => {
                 setData(response.data)
             })
             .catch(error => {
-                setData({ error: error.message });
+                setData({ error: 'Error in displaying data - ' + error.message });
                 console.log(error.message);
             })
     }, []);
 
     return (
         <div className='emails'>
-            <h1> List of emails </h1>
+            <h1> HTTP Get - error handling example - List of emails </h1>
+            {data.length ? (
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Body</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.map(item =>
+                                <tr key={item.id}><td>{item.name}</td><td>{item.email}</td><td>{item.body}</td></tr>)
 
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Body</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        data.length ? (data.map(item =>
-                            <tr key={item.id}><td>{item.name}</td><td>{item.email}</td><td>{item.body}</td></tr>))
-                            : <tr>{data.error}</tr>
-                    }
-                </tbody>
-            </Table>
+                        }
+                    </tbody>
+                </Table>)
+                : <div className="error">{data.error}</div>
+            }
         </div >
     )
 }

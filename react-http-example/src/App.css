@@ -1,0 +1,26 @@
+.error {
+  background-color: lightpink;
+  color: red;
+  padding: 5px;
+}
+
+.post-form {
+  padding: 1em;
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.emails,
+.posts,
+.form-container {
+  margin: 2em;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
