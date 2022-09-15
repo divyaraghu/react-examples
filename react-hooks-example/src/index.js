@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import UseStateExample from './components/UseStateExample';
 import UseEffectExample from './components/UseEffectExample';
 import UseEffectConditionalrender from './components/UseEffectConditionalrender';
+import UseContextExample from './components/UseContextExample';
+import UseReducerExample from './components/UseReducerExample';
+import UseReducerAndUseEffect from './components/UseReducerAndUseEffect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -24,6 +27,9 @@ root.render(
       <Route path="UseStateExample" element={<UseStateExample />} />
       <Route path="UseEffectExample" element={<UseEffectExample />} />
       <Route path="UseEffectConditionalrender" element={<UseEffectConditionalrender />} />
+      <Route path="UseContextExample" element={<UseContextExample />} />
+      <Route path="UseReducerExample" element={<UseReducerExample />} />
+      <Route path="UseReducerAndUseEffect" element={<UseReducerAndUseEffect />} />
     </Routes>
 
   </BrowserRouter>
