@@ -1,17 +1,36 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .buttons {
   margin: 30px 0;
 }
 
-.timer {
+.stopwatch {
   margin-top: 30px;
-  font-size: 40px;
-  font-weight: bolder;
   display: inline-block;
-
+  font-size: 40px;
 }
 
-.msec {}
+.timer input {
+  margin: 10px;
+  border: none;
+  width: 30px;
+  border-bottom: 1px solid grey;
+}
+
+.remSec {
+  font-size: 40px;
+  margin-left: 0.15em;
+}
+
+.main-box {
+  border: 1px solid grey;
+  margin: 2em;
+  border-radius: 1em;
+}
+
+.timeText,
+.msec {
+  font-size: 25px;
+}

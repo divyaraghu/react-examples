@@ -8,6 +8,7 @@ function StopWatch() {
         isRunning: false,
         label: "START",
         min: 0,
+        hour: 0,
         timer: 0,
         msec: 0
     };
@@ -26,10 +27,15 @@ function StopWatch() {
             case 'stop':
                 return { ...state, isRunning: false };
             case 'reset':
-                return { ...state, isRunning: false, timer: 0, msec: 0, min: 0, label: "START" };
+                return { ...state, isRunning: false, timer: 0, msec: 0, min: 0, hour: 0, label: "START" };
             case 'tick':
                 if (59 == state.timer) {
-                    return { ...state, timer: 0, min: state.min + 1, msec: 0 };
+                    if (59 == state.min) {
+                        return { ...state, timer: 0, hour: state.hour + 1, min: 0, msec: 0 };
+                    } else {
+                        return { ...state, timer: 0, min: state.min + 1, msec: 0 };
+                    }
+
                 } else {
                     return { ...state, timer: state.timer + 1, msec: 0 };
                 }
@@ -69,17 +75,19 @@ function StopWatch() {
 
     //Step4: add the buttons with dispatch functions, display the latest timer
     return (
-        <div>
-            <h1> Stopwatch example using useEffect and useReducer Hooks </h1>
+        <div className='stopwatch-container'>
+            <p> Stopwatch example using useEffect and useReducer Hooks </p>
+            <div className="stopwatch">
+                {state.hour > 0 ? <span> {state.hour}<span className='timeText'>h</span> </span> : <></>}{' '}
+                {state.min > 0 ? <span> {state.min}<span className='timeText'>m</span></span> : <></>}{' '}
+                {state.timer}<span className='timeText'>s</span>{' '}
+                {state.msec > 0 ? <span className='msec'>{state.msec}</span> : <></>}
+            </div>
+            <hr />
             <div className="buttons">
                 <Button variant="primary" onClick={() => dispatch({ type: 'toggle' })}> {state.label} </Button>{' '}
-                <Button variant="primary" onClick={() => dispatch({ type: 'reset' })}> Reset </Button>
+                <Button variant="primary" onClick={() => dispatch({ type: 'reset' })}> RESET </Button>
             </div>
-
-            <div className="timer">
-                {state.min} m {state.timer} s
-            </div>
-            <div className="msec"> {state.msec} </div>
 
         </div>
     )
